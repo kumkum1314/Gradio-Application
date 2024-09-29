@@ -1,5 +1,3 @@
-gradio[oauth]==4.44.0
-uvicorn>=0.14.0
+gradio[oauth]==<latest_version>
 pytesseract
-pillow  # If you're using PIL for image processing
-
+pillow
