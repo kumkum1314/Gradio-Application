@@ -1,4 +1,4 @@
-import os
+
 import gradio as gr
 
 from PIL import Image
@@ -34,5 +34,5 @@ with gr.Blocks() as demo:
     btn = gr.Button("Submit")
     btn.click(process, inputs=[image, keyword], outputs=[output_text, search_result])
 
-port = int(os.environ.get("PORT", 7860))  # Fallback to 7860 if not set
-demo.launch(server_name="0.0.0.0", server_port=port)
+  # Fallback to 7860 if not set
+demo.launch(server_name="0.0.0.0", server_port=port, share=True)
