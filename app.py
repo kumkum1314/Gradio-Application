@@ -1,6 +1,4 @@
-
 import gradio as gr
-
 from PIL import Image
 import pytesseract
 
@@ -18,10 +16,10 @@ def search_text(extracted_text, keyword):
 
 # Build the interface
 with gr.Blocks() as demo:
-    image = gr.Image(type="pil")  # Upload image
-    keyword = gr.Textbox(label="Enter keyword to search")  # Keyword input
-    output_text = gr.Textbox(label="Extracted text", interactive=False)  # Show extracted text
-    search_result = gr.Label(label="Search result")  # Search result
+    image = gr.Image(type="pil", label="Upload Image", elem_id="image_input")  # Upload image with id
+    keyword = gr.Textbox(label="Enter keyword to search", elem_id="keyword_input")  # Keyword input with id
+    output_text = gr.Textbox(label="Extracted text", interactive=False, elem_id="output_text")  # Show extracted text with id
+    search_result = gr.Label(label="Search result", elem_id="search_result")  # Search result with id
 
     def process(image, keyword):
         if image is None:
@@ -34,6 +32,5 @@ with gr.Blocks() as demo:
     btn = gr.Button("Submit")
     btn.click(process, inputs=[image, keyword], outputs=[output_text, search_result])
 
-  # Fallback to 7860 if not set
+# Fallback to 7860 if not set
 demo.launch(server_name="0.0.0.0", server_port=7860, share=False)
-
