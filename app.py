@@ -14,8 +14,15 @@ def search_text(extracted_text, keyword):
         return f"Keyword found at position {start_index}."
     return "Keyword not found."
 
+# Custom CSS to avoid deprecation warnings
+custom_css = """
+:state(color-primary) {
+    background-color: blue;
+}
+"""
+
 # Build the interface
-with gr.Blocks() as demo:
+with gr.Blocks(css=custom_css) as demo:
     # Unique IDs for inputs
     image_id = "image_input"
     keyword_id = "keyword_input"
