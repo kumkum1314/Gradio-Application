@@ -1,0 +1,11 @@
+version: 2.0
+python:
+  version: "3.8"
+dependencies:
+  - gradio[oauth]==4.44.0
+  - pytesseract
+  - pillow
+apt:
+  packages:
+    - tesseract-ocr
+    - tesseract-ocr-hin  # Hindi language support
