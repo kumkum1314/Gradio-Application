@@ -35,4 +35,5 @@ with gr.Blocks() as demo:
     btn.click(process, inputs=[image, keyword], outputs=[output_text, search_result])
 
   # Fallback to 7860 if not set
-demo.launch(server_name="0.0.0.0", server_port=port, share=True)
+demo.launch(server_name="0.0.0.0", server_port=7860, share=False)
+
