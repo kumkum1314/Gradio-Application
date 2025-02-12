@@ -6,8 +6,7 @@ Upload an image (PNG, JPEG, etc.).
 Extract text from the image using OCR (supports both Hindi and English).
 Search for specific keywords in the extracted text.
 Display extracted text and search results.
-Live URL
-[[Add your live URL here after deployment]](https://gradio-application-3.onrender.com)
+Live URL(https://gradio-application-3.onrender.com)
 
 Table of Contents
 1. Setup Instructions
